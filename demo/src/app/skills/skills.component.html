@@ -1,0 +1,11 @@
+<h1>Skills</h1>
+
+Skill <input type="text" #skill/>
+<p></p>
+<button (click)="addSkill(skill.value)">Add</button>
+<button (click)="deleteSkill(skill.value)">Delete</button>
+<p></p>
+<ul>
+    <li *ngFor="let skill of skills"> {{ skill }} </li>
+</ul>
+
