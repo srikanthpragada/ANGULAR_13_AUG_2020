@@ -1,0 +1,34 @@
+
+<style>
+  .big { font-size:30pt}
+  .red { color:red}
+</style>
+
+<h1>Property Bindings Demo</h1>
+<h2 [innerText]="message"></h2>
+<div [innerText]="'This is another message'"></div>
+<input type="checkbox" #checkbox (click)="true" >Checkbox 
+<p></p>
+<button [disabled]="checkbox.checked">Button </button> 
+
+<hr/>
+
+<h1>Attribute Bindings Demo</h1>
+<button  [attr.title]="'Shows date and time'">Date Time</button>
+
+<hr/>
+
+<h1>Class & Style Bindings Demo</h1>
+<div [class.big]="big.checked" [style.color]="red.checked ? 'red' : 'green'">Live as if you die tomorrow, learn as if you never die</div>
+<input type="checkbox" #big (click)="true">Big Letters 
+<input type="checkbox" #red (click)="true">Red Letters 
+
+<hr/>
+
+<h1>Event Binding</h1>
+<div (mousedown)="showPointer($event)">
+    Live as if you die tomorrow 
+    <p></p> 
+    learn as if you never die
+</div>
+<div>{{pointerPosition}}</div>

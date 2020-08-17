@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
@@ -11,6 +12,10 @@ export class SkillsComponent {
   constructor() { }
 
   addSkill(input: string) {
+    if (this.skills.includes(input)) {
+        alert("Skill is already present!")
+        return;
+    }
     this.skills.push(input)
     console.log(this.skills)
   }
@@ -20,7 +25,10 @@ export class SkillsComponent {
     {
           if (this.skills[idx] == input)
           {
-            this.skills.splice(parseInt(idx),1);  // delete element at idx 
+            if (confirm("Do you want to delete skill : " + input))
+            {
+               this.skills.splice(parseInt(idx),1);  // delete element at idx 
+            }
             break; 
           }
     }
