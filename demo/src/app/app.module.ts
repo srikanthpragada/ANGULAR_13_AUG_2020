@@ -1,19 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CounterComponent } from './counter/counter.component';
 
 // import { AppRoutingModule } from './app-routing.module';
-import { RatingsComponent } from './ratings/ratings.component';
-import { BindingsComponent } from './bindings/bindings.component';
+ 
 
 @NgModule({
   declarations: [
-    BindingsComponent
+    CounterComponent
   ],
   imports: [
     BrowserModule,
     // AppRoutingModule
   ],
   providers: [],
-  bootstrap: [BindingsComponent]
+  bootstrap: [CounterComponent ]
 })
 export class AppModule { }

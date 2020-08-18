@@ -1,0 +1,33 @@
+
+<style>
+    .red {
+        color :red;
+    }
+    .big {
+        font-size : 20pt;
+    }
+    .oddrow {
+        background-color:lightgray;
+    }
+</style>
+
+<h1>Directives Demo</h1>
+
+<h2>ngClass and ngStyle</h2>    
+<div [ngClass] = "{'red' : true, 'big' : true}">Srikanth Technologies</div>
+<p></p>
+<div [ngStyle] = "styles">Srikanth Technologies</div>
+<h2>ngSwitch</h2>
+<div [ngSwitch]="code">
+    <h2 *ngSwitchCase="1">First</h2>
+    <h2 *ngSwitchCase="2">Second</h2>
+    <h2 *ngSwitchDefault>Unknown</h2>
+</div>
+
+<h2>ngFor</h2>
+<div *ngFor ="let topic of topics;let i = index;let isodd=odd">
+    <div [class.oddrow]="isodd">
+    {{i + 1}} : {{topic}}
+    </div>
+</div>
+

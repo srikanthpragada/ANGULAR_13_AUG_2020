@@ -11,18 +11,19 @@ Rating <select #rating>
 <p></p>
 <button (click)="addSkill(skill.value, rating.value)">Add</button>
 <p></p>
-<table border='1'>
+<table border='1' *ngIf="skills.length > 0;else noskills">
     <tr>
         <th>Skill</th>
         <th>Rating</th>
         <th></th>
     </tr>
-    <tr *ngFor="let e of skills"> 
+    <tr *ngFor="let e of skills;let idx = index"> 
        <td>{{e.name}}</td>
        <td>{{e.rating}}</td>
        <td><button  [attr.title]="'Delete ' + e.name + 'skill'" 
-                    (click)="deleteSkill(e.name)">Delete</button></td>
+                    (click)="deleteSkill(idx)">Delete</button></td>
     </tr>
 </table>
+<ng-template #noskills><h3>No skills provided!</h3></ng-template>
     
   
