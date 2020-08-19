@@ -1,0 +1,44 @@
+<style>
+   input.ng-invalid { color :red }
+</style>
+
+<form  (ngSubmit)="register(regForm)" #regForm="ngForm" novalidate>
+    User's Name <br/>
+     <input type="text" [(ngModel)]="uname" name="uname" 
+     required  
+     minlength="5"
+     #username="ngModel" />
+     <!--
+     <span *ngIf="username.errors?.minlength">
+          Required length is {{username.errors.minlength.requiredLength}} but you entered only 
+              {{username.errors.minlength.actualLength}}
+     </span>
+     -->
+     <span *ngIf="regForm.submitted">
+         <span *ngIf="username.errors?.required">Missing username</span>
+         <span *ngIf="username.errors?.minlength">Minimum length is 5</span>
+     </span>
+
+    <p></p>
+    User's Age  <br/>
+    <input type="number" [(ngModel)]="age" name="age" required 
+          #agerv="ngModel" />
+          <span *ngIf="regForm.submitted">
+             <span *ngIf="agerv.errors?.required">Missing Age</span>
+          </span>
+    <p></p>
+    <button>Register</button>
+</form>
+
+<h3>Data</h3>
+Uname : {{uname}}
+<br/>
+Age : {{age}}
+
+<p></p>
+Valid : {{username.valid}}
+<br/>
+Dirty : {{username.dirty}}
+
+<p></p>
+

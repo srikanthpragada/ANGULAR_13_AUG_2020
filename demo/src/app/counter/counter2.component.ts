@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { CounterService } from './counter.service';
 
 @Component({
-    selector: 'app-counter',
-    templateUrl: './counter.component.html'
+    selector: 'app-counter2',
+    templateUrl: './counter2.component.html'
 })
-export class CounterComponent implements OnInit {
+export class Counter2Component implements OnInit {
     constructor(private counterService : CounterService) { }
 
     ngOnInit(): void { }
