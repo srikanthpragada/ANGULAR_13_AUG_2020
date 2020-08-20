@@ -1,18 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ProductsListComponent } from './icc/products-list.component';
-import { ProductDetailsComponent } from './icc/product-details.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RLoginComponent } from './forms/rlogin.component';
 // import { AppRoutingModule } from './app-routing.module';
  
 @NgModule({
   declarations: [
-     ProductsListComponent, ProductDetailsComponent
+     RLoginComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
     // AppRoutingModule
   ],
   providers: [],
-  bootstrap: [ProductsListComponent]
+  bootstrap: [RLoginComponent]
 })
 export class AppModule { }
