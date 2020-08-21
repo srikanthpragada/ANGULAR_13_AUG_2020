@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Beginning Angular with TypeScript",
+        "author": "Greg Lim",
+        "price": 399
+    },
+    {
+        "title": "Angular 5 Cookbook",
+        "author": "Matt Frisbie",
+        "price": 1199
+    },
+    {
+        "title": "Angular 5 Development with TypeScript",
+        "author": "Yakov Fain and Anton Moiseev",
+        "price": 679
+    }
+]

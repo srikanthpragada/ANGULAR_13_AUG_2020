@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Books</title>
+</head>
+
+<body>
+    <h1>Books with RxJS </h1>
+
+    <div>{{message}}</div>
+
+    <h3 *ngIf="errorObj">{{errorObj.message}}</h3>
+
+    <table *ngIf="books" border="1" style="width:100%" >
+        <tr>
+            <th>Title </th>
+            <th>Author </th>
+            <th>Price </th>
+        </tr>
+        <tr *ngFor="let b of books">
+            <td> {{ b.title }} </td>
+            <td> {{ b.author }} </td>
+            <td style="text-align: right;"> {{ b.price }} </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

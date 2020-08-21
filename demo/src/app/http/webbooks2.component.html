@@ -1,0 +1,15 @@
+   <h1>Books With Service</h1>
+    
+   <table  border="1" style="width:100%">
+        <tr>
+            <th>Id </th>
+            <th>Title </th>
+            <th>Price </th>
+        </tr>
+        <tr *ngFor="let b of books">
+            <td> {{ b.Id }} </td>
+            <td> {{ b.Title }} </td>
+            <td> {{ b.Price }} </td>
+        </tr>
+    </table>
+

@@ -1,0 +1,19 @@
+   <h1>Books</h1>
+    
+   <div *ngIf="!done">
+       <img src="assets/ajaxicon.gif"/>
+   </div>
+
+    <table *ngIf="done" border="1" style="width:100%">
+        <tr>
+            <th>Id </th>
+            <th>Title </th>
+            <th>Price </th>
+        </tr>
+        <tr *ngFor="let b of books">
+            <td> {{ b.Id }} </td>
+            <td> {{ b.Title }} </td>
+            <td> {{ b.Price }} </td>
+        </tr>
+    </table>
+

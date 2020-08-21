@@ -1,20 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RLoginComponent } from './forms/rlogin.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CountriesComponent } from './http/countries.component';
 // import { AppRoutingModule } from './app-routing.module';
  
 @NgModule({
   declarations: [
-     RLoginComponent
+    CountriesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
     // AppRoutingModule
   ],
   providers: [],
-  bootstrap: [RLoginComponent]
+  bootstrap: [CountriesComponent]
 })
 export class AppModule { }
