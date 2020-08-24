@@ -1,0 +1,29 @@
+<h1>Country Information</h1>
+    Country Code : <input type="text" #code maxlength="3" />
+    <p></p>
+    <button (click)="getInfo(code.value)">Get Information</button>
+    <p></p>
+    <h3 *ngIf="message">{{message}}</h3>
+
+    <table *ngIf="country">
+        <tr>
+            <td>Name</td>
+            <td>{{country.name}}</td>
+        </tr>
+        <tr>
+            <td>Capital</td>
+            <td>{{country.capital}}</td>
+        </tr>
+        <tr>
+            <td>Region</td>
+            <td>{{country.region}}</td>
+        </tr>
+        <tr>
+            <td>Population</td>
+            <td>{{country.population}}</td>
+        </tr>
+        <tr>
+            <td>Area</td>
+            <td>{{country.area}}</td>
+        </tr>
+    </table>

@@ -2,12 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { CountriesComponent } from './http/countries.component';
+import { CountryinfoComponent } from './http/countryinfo/countryinfo.component';
 // import { AppRoutingModule } from './app-routing.module';
  
 @NgModule({
   declarations: [
-    CountriesComponent
+    CountryinfoComponent
   ],
   imports: [
     BrowserModule,
@@ -17,6 +17,6 @@ import { CountriesComponent } from './http/countries.component';
     // AppRoutingModule
   ],
   providers: [],
-  bootstrap: [CountriesComponent]
+  bootstrap: [CountryinfoComponent]
 })
 export class AppModule { }
